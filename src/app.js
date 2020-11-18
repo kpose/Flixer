@@ -1,11 +1,15 @@
-import logo from "./logo.svg";
+import React from "react";
+import { FooterContainer } from "./containers/footer";
+import { FaqsContainer } from "./containers/faqs";
+import { JumbotronContainer } from "./containers/jumbotron";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <p> welcome </p>
-    </div>
+    <>
+      {" "}
+      <JumbotronContainer />
+      <FaqsContainer />
+      <FooterContainer />
+    </>
   );
 }
-
-export default App;
