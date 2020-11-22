@@ -1,11 +1,10 @@
 import React from "react";
-import { Header } from "../components";
-import { Logo } from "../components/header/styles/header";
+import { Header, Profiles } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
-import { Profiles } from "../components";
 
-export default function SelectProfileContainer({ user, setProfile }) {
+export function SelectProfileContainer({ user, setProfile }) {
+  //console.log(user.displayName);
   return (
     <>
       <Header bg={false}>
@@ -17,9 +16,17 @@ export default function SelectProfileContainer({ user, setProfile }) {
       <Profiles>
         <Profiles.Title>Who's watching?</Profiles.Title>
         <Profiles.List>
-          <Profiles.User>
+          <Profiles.User
+            onClick={() =>
+              setProfile({
+                displayName: user.displayName,
+                photoURL: user.photoURL,
+              })
+            }
+            data-testid="user-profile"
+          >
             <Profiles.Picture src={user.photoURL} />
-            <Profiles.Name> {user.displayName}</Profiles.Name>
+            <Profiles.Name>{user.displayName}</Profiles.Name>
           </Profiles.User>
         </Profiles.List>
       </Profiles>
