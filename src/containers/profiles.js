@@ -4,7 +4,6 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
 export function SelectProfileContainer({ user, setProfile }) {
-  //console.log(user.displayName);
   return (
     <>
       <Header bg={false}>
@@ -23,7 +22,6 @@ export function SelectProfileContainer({ user, setProfile }) {
                 photoURL: user.photoURL,
               })
             }
-            data-testid="user-profile"
           >
             <Profiles.Picture src={user.photoURL} />
             <Profiles.Name>{user.displayName}</Profiles.Name>

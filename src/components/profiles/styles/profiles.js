@@ -40,6 +40,7 @@ export const Picture = styled.img`
   height: auto;
   border: 3px solid black;
   cursor: pointer;
+  border-radius: 100px;
 `;
 
 export const Item = styled.li`
